@@ -7,7 +7,8 @@ const Button = (props) => {
 }
 
 const Statistics = ({good, neutral, bad, total, average, positive}) => {
-  return (
+  if(good || neutral || bad){
+    return (
       <div>
         <p>Good: {good}</p>
         <p>Neutral: {neutral}</p>
@@ -16,7 +17,11 @@ const Statistics = ({good, neutral, bad, total, average, positive}) => {
         <p>Average: {average}</p>
         <p>Positive: {positive} %</p>
       </div>
-  )
+    )
+  }
+
+  return <p>No feedback given</p>
+  
 }
 
 const App = () => {
