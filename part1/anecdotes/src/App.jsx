@@ -11,7 +11,7 @@ const Stats = ({anecdotes, votes}) => {
   }
 
   return (
-    <p>{anecdotes[index]}</p>
+    <AnecdoteDisplay selected={index} anecdotes={anecdotes} votes={votes}/>
   )
 }
 
